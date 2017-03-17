@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SimpleAdaptTest.iml" filepath="$PROJECT_DIR$/SimpleAdaptTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlertDialogActivity.iml" filepath="$PROJECT_DIR$/AlertDialogActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
