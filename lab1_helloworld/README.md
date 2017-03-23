@@ -2,7 +2,7 @@
 This is my first Android project and my first github project.
 
 ## Android project preview.
-![helloword](exec.jpg)
+![helloword](exec.jpg =100*50)
 
 ## author
 * Name:Luis
