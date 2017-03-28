@@ -342,4 +342,3 @@ class MultiModeCallback implements ListView.MultiChoiceModeListener {
 * Email:[@Luis](1396954967@qq.com)
 * QQ:1396954967
 * CSDN:[fjnuLuis](http://blog.csdn.net/lin_13969)
-Edit By [MaHua](http://mahua.jser.me)
