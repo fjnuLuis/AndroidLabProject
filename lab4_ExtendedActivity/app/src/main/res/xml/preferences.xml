@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="In-line preference">
+        <CheckBoxPreference
+            android:title="CheckBox Preference"
+            android:summary="This is a ckeckbox." />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Dialog-based preferences">
+        <EditTextPreference
+            android:title="Edit Text Preference"
+            android:summary="An example that uses an edit text dialog." />
+
+        <ListPreference
+            android:dialogTitle="Choose one"
+            android:entries="@array/choose_name_list"
+            android:entryValues="@array/choose_value_list"
+            android:title="List Preference"
+            android:summary="An example that uses a list dialog." />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Launch preferences">
+    <PreferenceScreen
+        android:title="Screen Preference"
+        android:summary="Show another screen of preference." >
+        <PreferenceCategory android:title="Screen preferences">
+            <CheckBoxPreference
+                android:title="Toggle Preference"
+                android:summary="Preference that is on the next screen but same hierarchy." />
+        </PreferenceCategory>
+
+        </PreferenceScreen>
+    <PreferenceScreen
+        android:title="Intent Preference"
+        android:summary="launches an activity from an intent.">
+
+        <intent android:action="android.intent.action.VIEW"
+            android:data="http://www.baidu.com" />
+
+    </PreferenceScreen>
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Preference attributes">
+        <CheckBoxPreference
+            android:key="chk_parent"
+            android:title="Parent checkbox preference"
+            android:summary="This is visually a parent." />
+        <CheckBoxPreference
+            android:dependency="chk_parent"
+            android:title="Intent Preference"
+            android:summary="This is visually a child." />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
