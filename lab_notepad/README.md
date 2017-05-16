@@ -951,4 +951,4 @@ else if (Intent.ACTION_INSERT.equals(action)
 * QQ:1396954967
 * CSDN:[fjnuLuis](http://blog.csdn.net/lin_13969)
 
- [1]: http://htmlpreview.github.io/?https://github.com/fjnuLuis/AndroidLabProject/blob/master/lab_notepad/markdownToc.html
+ [1]: https://fjnuluis.github.io/AndroidLabProject/lab_notepad/markdownToc.html
