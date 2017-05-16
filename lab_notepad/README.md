@@ -1,4 +1,5 @@
 # NotePad应用
+#### [HTML版md文件预览（浏览更便利）][1]
 ---
 ## 介绍
 在做这个项目的时候，我是边做边记录自己是怎么思考的。我觉得也比较直白、通俗易懂，就直接把心得贴上去吧。写这个项目的时候比较弱鸡，什么都不懂，但是会参考该项目基本框架的源码，源码写的挺全的，依葫芦画瓢就行了。功能如下：
@@ -950,3 +951,4 @@ else if (Intent.ACTION_INSERT.equals(action)
 * QQ:1396954967
 * CSDN:[fjnuLuis](http://blog.csdn.net/lin_13969)
 
+ [1]: http://htmlpreview.github.io/?https://github.com/fjnuLuis/AndroidLabProject/blob/master/lab_notepad/markdownToc.html
