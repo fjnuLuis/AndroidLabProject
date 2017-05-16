@@ -204,7 +204,7 @@ int[] viewIDs = { android.R.id.text1,
         };
 </code></pre>
 <p>时间戳显示就完成咯。</p>
-<p><a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/date.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/date.png" alt="image" style="max-width:100%;"></a></p>
+<p><a href="image/date.png" target="_blank"><img src="image/date.png" alt="image" style="max-width:100%;"></a></p>
 <hr>
 <ul>
 <li>
@@ -359,7 +359,7 @@ int[] viewIDs = { android.R.id.text1,
             return true;
 </code></pre>
 <p>这里面whereClause和Args填空值就没有where了,就显示全部信息了。</p>
-<p><a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/search.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/search.png" alt="image" style="max-width:100%;"></a></p>
+<p><a href="image/search.png" target="_blank"><img src="image/search.png" alt="image" style="max-width:100%;"></a></p>
 <hr>
 <ul>
 <li>
@@ -552,8 +552,8 @@ private int color;
         Drawable bdrawable = res.getDrawable(color);
         this.getWindow().setBackgroundDrawable(bdrawable);
 </code></pre>
-<p><a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/color-1.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/color-1.png" alt="image" style="max-width:100%;"></a>
-<a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/color-2.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/color-2.png" alt="image" style="max-width:100%;"></a></p>
+<p><a href="image/color-1.png" target="_blank"><img src="image/color-1.png" alt="image" style="max-width:100%;"></a>
+<a href="image/color-2.png" target="_blank"><img src="image/color-2.png" alt="image" style="max-width:100%;"></a></p>
 <hr>
 <ul>
 <li>
@@ -669,7 +669,7 @@ Cursor cursor = getContentResolver().query(getIntent().getData(),
                 service.save(color,sortType);
                 return true;
 </code></pre>
-<p><a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/sort.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/sort.png" alt="image" style="max-width:100%;"></a></p>
+<p><a href="image/sort.png" target="_blank"><img src="image/sort.png" alt="image" style="max-width:100%;"></a></p>
 <hr>
 <ul>
 <li>
@@ -798,9 +798,9 @@ if (mState == STATE_EDIT) {
 <p>测试下不行。那就是缺少权限了，AndroidManifest.xml加一下：</p>
 <div class="highlight highlight-text-xml"><pre> &lt;<span class="pl-ent">uses-permission</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.WRITE_EXTERNAL_STORAGE<span class="pl-pds">"</span></span>/&gt;</pre></div>
 <p>注意，直接找根路径下/myNotePad/文件夹就行了，storage是个软链接。</p>
-<p><a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/export-1.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/export-1.png" alt="image" style="max-width:100%;"></a>
-<a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/export-2.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/export-2.png" alt="image" style="max-width:100%;"></a>
-<a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/export-3.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/export-3.png" alt="image" style="max-width:100%;"></a></p>
+<p><a href="image/export-1.png" target="_blank"><img src="image/export-1.png" alt="image" style="max-width:100%;"></a>
+<a href="image/export-2.png" target="_blank"><img src="image/export-2.png" alt="image" style="max-width:100%;"></a>
+<a href="image/export-3.png" target="_blank"><img src="image/export-3.png" alt="image" style="max-width:100%;"></a></p>
 <hr>
 <ul>
 <li>
@@ -918,9 +918,9 @@ if (mState == STATE_EDIT) {
 
     }
 </code></pre>
-<p><a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/import-1.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/import-1.png" alt="image" style="max-width:100%;"></a>
-<a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/import-2.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/import-2.png" alt="image" style="max-width:100%;"></a>
-<a href="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/import-3.png" target="_blank"><img src="///D://%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/AndroidLabProject/lab_notepad/image/import-3.png" alt="image" style="max-width:100%;"></a></p>
+<p><a href="image/import-1.png" target="_blank"><img src="image/import-1.png" alt="image" style="max-width:100%;"></a>
+<a href="image/import-2.png" target="_blank"><img src="image/import-2.png" alt="image" style="max-width:100%;"></a>
+<a href="image/import-3.png" target="_blank"><img src="image/import-3.png" alt="image" style="max-width:100%;"></a></p>
 <hr>
 <h2>
 <a id="user-content-author" class="anchor" href="#author" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>author</h2>
