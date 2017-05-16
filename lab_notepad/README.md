@@ -1,16 +1,17 @@
-# 期中作业 -- NotePad改进
+# NotePad应用
 ---
-在做这个作业的时候，我是边做边记录自己是怎么思考的。我觉得也比较直白、通俗易懂，就直接把心得贴上去吧。功能如下：
-- 添加时间戳    （基础功能）
-- 查询          （基础功能）
-- 修改背景色    （附加功能）
-- 排序          （附加功能）
-- 文件导出      （附加功能）
-- 文件导入      （附加功能）
+## 介绍
+在做这个项目的时候，我是边做边记录自己是怎么思考的。我觉得也比较直白、通俗易懂，就直接把心得贴上去吧。写这个项目的时候比较弱鸡，什么都不懂，但是会参考该项目基本框架的源码，源码写的挺全的，依葫芦画瓢就行了。功能如下：
+* [1.添加时间戳（基础功能）](#1)
+* [2.模糊查询（基础功能）](#2)
+* [3.修改背景色（附加功能）](#3)
+* [4.排序（附加功能）](#4)
+* [5.文件导出（附加功能）](#5)
+* [6.文件导入（附加功能）](#6)
 
 ---
-
-##  一、添加时间戳
+## 功能
+* <h3 id="1">1.添加时间戳（基础功能）</h3>
 找到ListActivity（就是NoteList）的ItemStyle -->lauout/notelist_item.xml，这个xml是定义ListView每个Item的样式，修改它就行了。里面是不是只有一个TextView，我改过了忘记了哈哈。不过好理解啊，你想要显示时间戳，那就再加个TextView。
 我调好的Style：（各种调啊，然后现在才好看那么一丢丢，直接加会显示在右上角，或者左上角。）
 
@@ -180,7 +181,7 @@ int[] viewIDs = { android.R.id.text1,
 
 ---
 
-## 二、添加查询功能
+* <h3 id="2">2.模糊查询（基础功能）</h3>
 查询的话本来是想能不能在第一行不绑定数据了改查询接口呢？但是这个本身是ListActivity，改成其他的可能需要改很多源码，就想下直接在菜单中添加一个按钮吧，点一下就展开，点一下又缩回去这样。那就找样式呗：
 
 ```xml
@@ -320,7 +321,7 @@ case R.id.context_delete:
         Uri noteUri = ContentUris.withAppendedId(getIntent().getData(), info.id);
 ```
 改成我们getIntent.getData()试试？直接崩了,直接删了所有的条目。果然我们家的URI比不上人家的URI，没有指定具体的ID，就相当于delete没有where条件限制。
-算了算了，我这种方法更简单。
+算了算了，我这种方法更简单。（后来才知道，基本框架上的ContentProvider的insert、update、delete都有调用notifyChanges函数，它会自动刷新列表，那查询没有改动数据库，就没办法notifyChanges，自己手动绑定吧）
 
 仿佛还有一个按钮没有说：menu_all。现在说会比较容易明白吧。有没有发现SearchView监听器两个重载函数中，有一个是TextChanged，这就麻烦了，Searchview要收缩肯定要清空搜索框文字。清空就搜索空了。搜索空串就会显示所有的条目吧，这里有2种做法：
 1.	让它搜索呗。。那你关搜索框的时候就只能显示全部，搜索框会占用一整个menu，那就不能使用menu的功能了.
@@ -351,7 +352,8 @@ case R.id.menu_add:
 ![image](image/search.png)
 
 ---
-## 三、修改背景色
+
+* <h3 id="3">3.修改背景色（附加功能）</h3>
 因为是自定义的颜色按钮（textView点击事件），用户偏好设置要自己保存到SharedPreferences，新建一个类，获取和保存SharedPreferences的键值对：
 
 ```
@@ -556,7 +558,7 @@ NoteList-->OnCreate加载时需要加载配置文件，并获取配置文件中�
 ![image](image/color-2.png)
 
 ---
-## 四、排序
+* <h3 id="4">4.排序（附加功能）</h3>
 前面那个SharedPreferences个里已经定义了sort类型了，就可以直接set进去。先弄排版吧，也是右上角列表（list_options_menu）添加一个小菜单：
 ```xml
 !-- 排序菜单列表-->
@@ -677,7 +679,7 @@ Cursor cursor = getContentResolver().query(getIntent().getData(),
 
 ---
 
-## 五、文本导出
+* <h3 id="5">5.文本导出（附加功能）</h3>
 试过listView多选模式，需要定制背景样式，不然多选颜色看不清啊，所以就单文件导出吧。Low了点。
 先把创建文件夹和文件的工具写好：
 ```
@@ -815,7 +817,7 @@ if (mState == STATE_EDIT) {
 
 ---
 
-## 六、文件导入
+* <h3 id="6">6.文件导入（附加功能）</h3>
 加个按钮吧。。这个不属于某个ListItem，那还是加在右上角Menu里（list_options_menu）:
 
 ```xml
@@ -947,38 +949,4 @@ else if (Intent.ACTION_INSERT.equals(action)
 * Email:[@Luis](1396954967@qq.com)
 * QQ:1396954967
 * CSDN:[fjnuLuis](http://blog.csdn.net/lin_13969)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
